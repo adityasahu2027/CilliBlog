@@ -1,7 +1,7 @@
 
 import { useAuth } from "../context/Authprovider";
 import Sidebar from "../dashboard/Sidebar";
-import MyProfile from "../dashboard/MYprofile";
+import MyProfile from "../dashboard/MyProfile";
 import MyBlog from "../dashboard/MyBlog";
 import CreateBlog from "../dashboard/CreateBlog";
 import UpdateBlog from "../dashboard/UpdateBlog";
