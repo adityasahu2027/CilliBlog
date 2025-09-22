@@ -32,7 +32,7 @@ function CreateBlog() {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/blogs/create",
+        "https://cilliblog-backend-server.onrender.com/api/blogs/create",
         formData,
         {
           withCredentials: true,

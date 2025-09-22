@@ -10,7 +10,7 @@ function MyProfile() {
     const fetchMyProfile = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/users/my-profile",
+          "https://cilliblog-backend-server.onrender.com/api/users/my-profile",
           { withCredentials: true }
         );
         console.log(data);

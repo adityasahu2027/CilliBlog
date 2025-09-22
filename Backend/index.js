@@ -12,10 +12,22 @@ const app = express()
 dotenv.config();
 
 // ✅ enable CORS
-app.use(cors({ 
-  origin: "http://localhost:5173",  // frontend URL
+// ===== CORS setup =====
+const allowedOrigins = [
+  "http://localhost:5173",                       // local dev
+  "https://chimerical-frangipane-2fe36c.netlify.app" // Netlify deploy
+];
+
+app.use(cors({
+  origin: function(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
-  methods:["GET","POST","PUT","DELETE"]  
+  methods: ["GET", "POST", "PUT", "DELETE"]
 }));
 
 //cloudinary config

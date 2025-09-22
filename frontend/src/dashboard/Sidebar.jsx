@@ -22,7 +22,7 @@ function Sidebar({ setComponent }) {
   const handleLogout = async (e) => {
     e.preventDefault();
     try {
-      await axios.get("http://localhost:4000/api/users/logout", {
+      await axios.get("https://cilliblog-backend-server.onrender.com/api/users/logout", {
         withCredentials: true,
       });
       toast.success("User logout successfully");

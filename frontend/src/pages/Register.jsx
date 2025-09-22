@@ -41,7 +41,7 @@ const navigate=useNavigate();
     formData.append("photo", photo);
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/users/register",formData,{
+        "https://cilliblog-backend-server.onrender.com/api/users/register",formData,{
           headers:{
             "Content-Type":"multipart/form-data"
           }

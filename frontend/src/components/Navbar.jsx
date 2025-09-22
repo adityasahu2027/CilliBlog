@@ -15,7 +15,7 @@ function Navbar() {
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:4000/api/users/logout",
+        "hhttps://cilliblog-backend-server.onrender.com/api/users/logout",
         { withCredentials: true }
       );
       console.log(data);
