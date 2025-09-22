@@ -12,10 +12,10 @@ const app = express()
 dotenv.config();
 
 // ✅ enable CORS
-// ===== CORS setup =====
 const allowedOrigins = [
-  "http://localhost:5173",                       // local dev
-  "https://chimerical-frangipane-2fe36c.netlify.app" // Netlify deploy
+  "http://localhost:5173",                       
+  "https://leafy-pudding-8f7d7b.netlify.app",
+  "https://chimerical-frangipane-2fe36c.netlify.app"
 ];
 
 app.use(cors({
@@ -29,6 +29,7 @@ app.use(cors({
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE"]
 }));
+
 
 //cloudinary config
 cloudinary.config({ 

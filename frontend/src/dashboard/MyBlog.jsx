@@ -24,7 +24,7 @@ function MyBlog() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://cilliblog-backend-server.onrender.com/api/blogs/delete/${id}`, {
+      await axios.delete(`https://cilliblog-4.onrender.com/api/blogs/delete/${id}`, {
         withCredentials: true,
       });
       setMyblogs(myBlogs.filter((blog) => blog._id !== id));
