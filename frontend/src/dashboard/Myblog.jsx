@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-function Myblog() {
+function MyBlog() {
   const [myBlogs, setMyblogs] = useState([]);
   const navigate = useNavigate();
 
@@ -104,4 +104,4 @@ function Myblog() {
   );
 }
 
-export default Myblog;
+export default MyBlog;

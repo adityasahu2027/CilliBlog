@@ -1,8 +1,8 @@
 
 import { useAuth } from "../context/Authprovider";
 import Sidebar from "../dashboard/Sidebar";
-import MYprofile from "../dashboard/MYprofile";
-import MyBlog from "../dashboard/Myblog";
+import MyProfile from "../dashboard/MYprofile";
+import MyBlog from "../dashboard/MyBlog";
 import CreateBlog from "../dashboard/CreateBlog";
 import UpdateBlog from "../dashboard/UpdateBlog";
 import { useState } from "react";
@@ -27,7 +27,7 @@ function Dashboard() {
       <div>
         <Sidebar component={component} setComponent={setComponent} />
         {component === "My Profile" ? (
-          <MYprofile />
+          <MyProfile />
         ) : component === "My Blog" ? (
           <MyBlog />
         ) : component === "Create Blog" ? (

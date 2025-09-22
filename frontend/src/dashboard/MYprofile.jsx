@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Mail, Phone, GraduationCap, Shield, Calendar } from "lucide-react";
 
-function MYprofile() {
+function MyProfile() {
   const [myProfile, setMyProfile] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -84,4 +84,4 @@ function MYprofile() {
   );
 }
 
-export default MYprofile;
+export default MyProfile;
