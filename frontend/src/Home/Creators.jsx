@@ -8,7 +8,7 @@ function Creators() {
   useEffect(() => {
     const fetchAdmin = async () => {
       const { data } = await axios.get(
-        "https://cilliblog-4.onrender.com/api/users/admins",
+        "https://cilliblog-5.onrender.com/api/users/admins",
         {
           withCredentials: true,
         }

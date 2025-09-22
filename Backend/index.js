@@ -12,22 +12,14 @@ const app = express()
 dotenv.config();
 
 // ✅ enable CORS
-const allowedOrigins = [
-  "http://localhost:5173",                       
-  "https://leafy-pudding-8f7d7b.netlify.app",
-  "https://chimerical-frangipane-2fe36c.netlify.app"
-];
 
 app.use(cors({
   origin: function(origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
+    // Agar request local ya frontend se aa rahi hai, allow karo
+    callback(null, true); // har origin allow
   },
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"]
+  credentials: true,       // cookies enable
+  methods: ["GET","POST","PUT","DELETE"]
 }));
 
 

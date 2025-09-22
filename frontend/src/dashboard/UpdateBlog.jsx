@@ -29,7 +29,7 @@ function UpdateBlog() {
     const fetchBlogDetails = async () => {
       try {
         const { data } = await axios.get(
-          `https://cilliblog-4.onrender.com/api/blogs/single-blog/${id}`,
+          `https://cilliblog-5.onrender.com/api/blogs/single-blog/${id}`,
           {
             withCredentials: true,
           }
@@ -62,7 +62,7 @@ function UpdateBlog() {
  }
     try {
       const { data } = await axios.put(
-        `https://cilliblog-4.onrender.com/api/blogs/update/${id}`,
+        `https://cilliblog-5.onrender.com/api/blogs/update/${id}`,
         formData,
         {
           withCredentials: true,

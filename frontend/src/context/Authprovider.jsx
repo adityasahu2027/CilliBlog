@@ -17,7 +17,9 @@ export const Authprovider = ({ children }) => {
 
         if (token) {
           const { data } = await axios.get(
-            "https://cilliblog-4.onrender.com/api/users/my-profile",
+            "https://cilliblog-5.onrender.com/api/users/my-profile",
+
+           
             {
               withCredentials: true,
               headers: {
@@ -45,7 +47,7 @@ export const Authprovider = ({ children }) => {
     const fetchBlogs = async () => {
       try {
         const { data } = await axios.get(
-          "https://cilliblog-4.onrender.com/api/blogs/all-blogs",
+          "https://cilliblog-5.onrender.com/api/blogs/all-blogs",
           { withCredentials: true }
         );
         console.log("Blogs:", data);

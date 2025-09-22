@@ -12,7 +12,7 @@ function BlogDetails() {
     const fetchBlog = async () => {
       try {
         const { data } = await axios.get(
-          `https://cilliblog-4.onrender.com/api/blogs/single-blog/${id}`,
+          `https://cilliblog-5.onrender.com/api/blogs/single-blog/${id}`,
           { withCredentials: true }
         );
         setBlog(data);
