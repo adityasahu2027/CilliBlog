@@ -101,8 +101,8 @@ if(!token){
 }
         res.clearCookie("jwt", {
   httpOnly: true,
-  secure: false, // agar localhost pe ho to false karo
-  sameSite: "strict",
+  secure: true, // agar localhost pe ho to false karo
+  sameSite: "none",
 });
         res.status(200).json({ message: "User logged out successfully" });
 

@@ -7,7 +7,7 @@ function Creator() {
   useEffect(() => {
     const fetchCreator = async () => {
       const { data } = await axios.get(
-        "https://cilliblog-5.onrender.com/api/users/admins",
+        "https://cilliblog-6.onrender.com/api/users/admins",
         {
           withCredentials: true,
         }

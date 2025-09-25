@@ -15,6 +15,7 @@ dotenv.config();
 
 app.use(cors({
   origin: function(origin, callback) {
+    
     // Agar request local ya frontend se aa rahi hai, allow karo
     callback(null, true); // har origin allow
   },

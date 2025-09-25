@@ -11,7 +11,7 @@ function MyBlog() {
     const fetchMyBlogs = async () => {
       try {
         const { data } = await axios.get(
-          "https://cilliblog-5.onrender.com/api/blogs/my-blogs",
+          "https://cilliblog-6.onrender.com/api/blogs/my-blogs",
           { withCredentials: true }
         );
         setMyblogs(data);
@@ -24,7 +24,7 @@ function MyBlog() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://cilliblog-5.onrender.com/api/blogs/delete/${id}`, {
+      await axios.delete(`https://cilliblog-6.onrender.com/api/blogs/delete/${id}`, {
         withCredentials: true,
       });
       setMyblogs(myBlogs.filter((blog) => blog._id !== id));

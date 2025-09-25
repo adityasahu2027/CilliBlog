@@ -6,9 +6,10 @@ import { User } from "../model/user.js";
         expiresIn:"15d",
     });
     res.cookie("jwt",token,{
-        httpOnly:false,  //client side se access karne ke liye false aur server side se access karne ke liye true 
+        httpOnly:true,  //client side se access karne ke liye false aur server side se access karne ke liye true 
         secure:true,  //agar localhost pe ho to false karo nhi to true karo
         sameSite:"none", //cross site cookie ke liye none karo
+         maxAge: 15*24*60*60*1000 // 15 din milliseconds me
     });
     await User.findByIdAndUpdate(userId,{token});
     return token;
